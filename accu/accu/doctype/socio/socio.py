@@ -18,7 +18,7 @@ class Socio(Document):
         '''
         def encode_char(c):
             # Position in the alphabet (A=1, B=2, ...) plus nine
-	    return str(9 + ord(c) - 64)
+	        return str(9 + ord(c) - 64)
             # remove whitespaces, upper case to get the right number from ord()
 	    # iban = ''.join(self.iban.split(' ')).upper()
         iban = self.iban
