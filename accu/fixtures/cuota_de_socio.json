@@ -1,0 +1,54 @@
+[
+ {
+  "cantidad": 52.5,
+  "docstatus": 0,
+  "doctype": "Cuota de socio",
+  "es_exento": 0,
+  "modified": "2020-11-08 13:19:23.962832",
+  "name": "Normal",
+  "nombre": "Normal",
+  "notas": "Cuota normal",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "cantidad": 0.0,
+  "docstatus": 0,
+  "doctype": "Cuota de socio",
+  "es_exento": 1,
+  "modified": "2020-11-08 13:20:58.328878",
+  "name": "Exento temporal",
+  "nombre": "Exento temporal",
+  "notas": "Exenci\u00f3n temporal por motivos econ\u00f3micos u otros motivos extraordinarios.\nSe diferencia de la exenci\u00f3n permamente para que sea f\u00e1cil saber qu\u00e9 socios tienen una situaci\u00f3n pendiente de corregir m\u00e1s adelante.",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "cantidad": 35.0,
+  "docstatus": 0,
+  "doctype": "Cuota de socio",
+  "es_exento": 0,
+  "modified": "2020-11-08 13:29:56.742341",
+  "name": "Reducida",
+  "nombre": "Reducida",
+  "notas": "Cuota reducida para socios antiguos. OBSOLETA. No aplicar a socios nuevos.",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "cantidad": 0.0,
+  "docstatus": 0,
+  "doctype": "Cuota de socio",
+  "es_exento": 1,
+  "modified": "2020-11-08 13:39:12.307403",
+  "name": "Exento permanente",
+  "nombre": "Exento permanente",
+  "notas": "Exenci\u00f3n permanente por motivos honor\u00edficos, edad avanzada u otros motivos que no vayan a cambiar en el futuro.",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ }
+]

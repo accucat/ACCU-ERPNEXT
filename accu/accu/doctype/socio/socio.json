@@ -1,0 +1,337 @@
+{
+ "_liked_by": "[\"Administrator\"]",
+ "actions": [],
+ "autoname": "Socio .#####",
+ "creation": "2020-11-08 12:16:44.753254",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "nombre",
+  "apellidos",
+  "nombrecompleto",
+  "tipo_id",
+  "numero_id",
+  "column_break_5",
+  "genero",
+  "fecha_nac",
+  "ocupaci\u00f3n",
+  "datos_de_contacto_section",
+  "direcci\u00f3n_1",
+  "direcci\u00f3n_2",
+  "poblaci\u00f3n",
+  "provincia",
+  "c\u00f3digo_postal",
+  "pa\u00eds",
+  "telf_1_prefijo",
+  "telf_1",
+  "telf_2_prefijo",
+  "telf_2",
+  "email",
+  "alta_y_baja_section",
+  "fecha_alta",
+  "fecha_baja",
+  "causa_de_baja",
+  "datos_m\u00e9dicos_section",
+  "diagn\u00f3stico",
+  "fecha_diagn\u00f3stico",
+  "medico_1",
+  "centro_1",
+  "medico_2",
+  "centro_2",
+  "tipo_invalidez",
+  "porcentaje_minusval\u00eda",
+  "datos_de_pago_section",
+  "cuota",
+  "medio_de_pago",
+  "iban",
+  "pagador",
+  "nombre_pagador",
+  "tipo_id_pagador",
+  "numero_id_pagador"
+ ],
+ "fields": [
+  {
+   "fieldname": "nombre",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nombre",
+   "reqd": 1
+  },
+  {
+   "fieldname": "apellidos",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Apellidos",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "genero",
+   "fieldtype": "Select",
+   "label": "G\u00e9nero",
+   "options": "Femenino\nMasculino\nOtros/se opone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fecha_nac",
+   "fieldtype": "Date",
+   "label": "Fecha Nac."
+  },
+  {
+   "fieldname": "ocupaci\u00f3n",
+   "fieldtype": "Data",
+   "label": "Ocupaci\u00f3n"
+  },
+  {
+   "fieldname": "datos_de_contacto_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de contacto"
+  },
+  {
+   "description": "Calle y n\u00famero de calle",
+   "fieldname": "direcci\u00f3n_1",
+   "fieldtype": "Data",
+   "label": "Direcci\u00f3n 1",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "description": "Piso y puerta (si es el caso)",
+   "fieldname": "direcci\u00f3n_2",
+   "fieldtype": "Data",
+   "label": "Direcci\u00f3n 2"
+  },
+  {
+   "fieldname": "poblaci\u00f3n",
+   "fieldtype": "Data",
+   "label": "Poblaci\u00f3n",
+   "reqd": 1
+  },
+  {
+   "fieldname": "provincia",
+   "fieldtype": "Data",
+   "label": "Provincia",
+   "reqd": 1
+  },
+  {
+   "fieldname": "c\u00f3digo_postal",
+   "fieldtype": "Data",
+   "label": "C\u00f3digo postal",
+   "reqd": 1
+  },
+  {
+   "default": "Espa\u00f1a",
+   "fieldname": "pa\u00eds",
+   "fieldtype": "Data",
+   "label": "Pa\u00eds",
+   "reqd": 1
+  },
+  {
+   "default": "+34",
+   "fieldname": "telf_1_prefijo",
+   "fieldtype": "Data",
+   "label": "Telf 1 (prefijo)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "telf_1",
+   "fieldtype": "Data",
+   "label": "Telf 1",
+   "reqd": 1
+  },
+  {
+   "default": "+34",
+   "fieldname": "telf_2_prefijo",
+   "fieldtype": "Data",
+   "label": "Telf 2 (prefijo)"
+  },
+  {
+   "fieldname": "telf_2",
+   "fieldtype": "Data",
+   "label": "Telf 2"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "email",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "alta_y_baja_section",
+   "fieldtype": "Section Break",
+   "label": "Alta y baja"
+  },
+  {
+   "default": "Today",
+   "fieldname": "fecha_alta",
+   "fieldtype": "Date",
+   "label": "Fecha alta",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fecha_baja",
+   "fieldtype": "Date",
+   "label": "Fecha baja",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.fecha_baja != null",
+   "fieldname": "causa_de_baja",
+   "fieldtype": "Link",
+   "label": "Causa de baja",
+   "mandatory_depends_on": "eval:doc.fecha_baja != null",
+   "options": "Causa de baja"
+  },
+  {
+   "fieldname": "datos_m\u00e9dicos_section",
+   "fieldtype": "Section Break",
+   "label": "Datos m\u00e9dicos"
+  },
+  {
+   "fieldname": "diagn\u00f3stico",
+   "fieldtype": "Select",
+   "label": "Diagn\u00f3stico",
+   "options": "Crohn\nColitis ulcerosa"
+  },
+  {
+   "fieldname": "fecha_diagn\u00f3stico",
+   "fieldtype": "Date",
+   "label": "Fecha diagn\u00f3stico (aprox)"
+  },
+  {
+   "fieldname": "medico_1",
+   "fieldtype": "Data",
+   "label": "M\u00e9dico 1"
+  },
+  {
+   "fieldname": "centro_1",
+   "fieldtype": "Data",
+   "label": "Centro 1"
+  },
+  {
+   "fieldname": "medico_2",
+   "fieldtype": "Data",
+   "label": "M\u00e9dico 2"
+  },
+  {
+   "fieldname": "centro_2",
+   "fieldtype": "Data",
+   "label": "Centro 2"
+  },
+  {
+   "fieldname": "tipo_invalidez",
+   "fieldtype": "Select",
+   "label": "Tipo invalidez",
+   "options": "Sin invalidez o no documentada\nPermanente total\nPermanente absoluta\nGran invalidez"
+  },
+  {
+   "fieldname": "porcentaje_minusval\u00eda",
+   "fieldtype": "Select",
+   "label": "Porcentaje minusval\u00eda",
+   "options": "De 0% a 32%\nde 33% a 64%\nde 65% en adelante"
+  },
+  {
+   "fieldname": "datos_de_pago_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de pago"
+  },
+  {
+   "default": "Normal",
+   "fieldname": "cuota",
+   "fieldtype": "Link",
+   "label": "Cuota",
+   "options": "Cuota de socio",
+   "reqd": 1
+  },
+  {
+   "default": "Domiciliaci\u00f3n bancaria",
+   "fieldname": "medio_de_pago",
+   "fieldtype": "Select",
+   "label": "Medio de pago",
+   "options": "Domiciliaci\u00f3n bancaria\nPago manual",
+   "reqd": 1
+  },
+  {
+   "fieldname": "iban",
+   "fieldtype": "Data",
+   "label": "N\u00fam. cuenta (IBAN)"
+  },
+  {
+   "description": "Es importante introducir los datos del verdadero pagador de la cuota de socio, ya que los las asociaciones tienen la obligaci\u00f3n legal de emitir certificados fiscales para desgravar en hacienda, y estos deben ir a nombre de dicho pagador.\n\nSi el socio y el que paga son personas distintas, por favor indique el nombre completo y DNI del pagador a continuaci\u00f3n. Si se dejan estos campos en blanco, se copiar\u00e1n directamente de los datos del socio. ",
+   "fieldname": "pagador",
+   "fieldtype": "Heading",
+   "label": "Pagador"
+  },
+  {
+   "fetch_if_empty": 1,
+   "fieldname": "nombre_pagador",
+   "fieldtype": "Data",
+   "label": "Nombre completo"
+  },
+  {
+   "fieldname": "nombrecompleto",
+   "fieldtype": "Data",
+   "label": "Nombre completo",
+   "read_only": 1
+  },
+  {
+   "fieldname": "numero_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "N\u00famero de documento",
+   "reqd": 1
+  },
+  {
+   "default": "DNI",
+   "fieldname": "tipo_id",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Tipo de documento",
+   "options": "DNI\nNIE",
+   "reqd": 1
+  },
+  {
+   "default": "DNI",
+   "fieldname": "tipo_id_pagador",
+   "fieldtype": "Select",
+   "label": "Tipo de documento",
+   "options": "DNI\nNIE",
+   "reqd": 1
+  },
+  {
+   "fieldname": "numero_id_pagador",
+   "fieldtype": "Data",
+   "label": "N\u00famero de documento"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2020-11-08 18:23:52.262941",
+ "modified_by": "Administrator",
+ "module": "ACCU",
+ "name": "Socio",
+ "name_case": "UPPER CASE",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

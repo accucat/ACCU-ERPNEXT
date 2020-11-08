@@ -1,0 +1,82 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Causa de baja",
+  "modified": "2020-11-08 17:33:32.696038",
+  "name": "Defunci\u00f3n",
+  "nombre": "Defunci\u00f3n",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Causa de baja",
+  "modified": "2020-11-08 17:34:53.876382",
+  "name": "Impago",
+  "nombre": "Impago",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Causa de baja",
+  "modified": "2020-11-08 17:35:07.516913",
+  "name": "Orden del socio - Cambio de opini\u00f3n / no necesidad",
+  "nombre": "Orden del socio - Cambio de opini\u00f3n / no necesidad",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Causa de baja",
+  "modified": "2020-11-08 17:35:13.187090",
+  "name": "Orden del socio - Cambio de residencia",
+  "nombre": "Orden del socio - Cambio de residencia",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Causa de baja",
+  "modified": "2020-11-08 17:35:19.139335",
+  "name": "Orden del socio - Desacuerdo con la entidad",
+  "nombre": "Orden del socio - Desacuerdo con la entidad",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Causa de baja",
+  "modified": "2020-11-08 17:35:24.501351",
+  "name": "Orden del socio - Motivo no especificado/personal",
+  "nombre": "Orden del socio - Motivo no especificado/personal",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Causa de baja",
+  "modified": "2020-11-08 17:35:46.801292",
+  "name": "Orden del socio - Motivos econ\u00f3micos (no deja cuotas impagadas)",
+  "nombre": "Orden del socio - Motivos econ\u00f3micos (no deja cuotas impagadas)",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Causa de baja",
+  "modified": "2020-11-08 17:37:14.984798",
+  "name": "Otros motivos no especificados",
+  "nombre": "Otros motivos no especificados",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ }
+]

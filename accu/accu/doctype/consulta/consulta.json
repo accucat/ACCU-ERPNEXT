@@ -1,0 +1,130 @@
+{
+ "_liked_by": "[\"Administrator\"]",
+ "actions": [],
+ "allow_copy": 1,
+ "allow_import": 1,
+ "autoname": "format:CONS-{YYYY}-{#####}",
+ "creation": "2020-11-07 20:59:28.523397",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "fecha",
+  "tipo",
+  "atravesde",
+  "contacto",
+  "socio",
+  "cb1_column",
+  "descripcion",
+  "resuelta",
+  "sb1_section",
+  "comentarios"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "fecha",
+   "fieldtype": "Data",
+   "label": "Fecha"
+  },
+  {
+   "fieldname": "tipo",
+   "fieldtype": "Data",
+   "label": "Tipo de Consulta",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "atravesde",
+   "fieldtype": "Select",
+   "label": "Consulta a trav\u00e9s de",
+   "options": "Telf\nEmail directo\nFormularios\nRedes sociales\nPresencial\nOtros",
+   "reqd": 1
+  },
+  {
+   "description": "Si es una consulta asociada a alg\u00fan socio, indicar aqu\u00ed el contacto de esa persona.\n\nSi es una consulta an\u00f3nima o por cuestiones de protecci\u00f3n de datos no se puede incluir su nombre, dejar en blanco.\n\nSi es una consulta que llega a trav\u00e9s de formulario y el usuario ha autorizado a tratar sus datos, se puede dar de alta un contacto nuevo para asociarlo a esta consulta.\n\n\n",
+   "fieldname": "contacto",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "label": "Contacto relacionado",
+   "options": "Contact"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "0",
+   "fieldname": "socio",
+   "fieldtype": "Check",
+   "label": "Socio o familiar de socio"
+  },
+  {
+   "bold": 1,
+   "fieldname": "cb1_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "descripcion",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Descripcion",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
+   "default": "0",
+   "description": "No olvide marcar esta consulta como resuelta si ya ha sido resuelta.",
+   "fieldname": "resuelta",
+   "fieldtype": "Check",
+   "label": "Resuelta"
+  },
+  {
+   "fieldname": "sb1_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "comentarios",
+   "fieldtype": "Table",
+   "label": "Seguimiento",
+   "options": "SeguimientoConsultas"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2020-11-08 15:12:47.317360",
+ "modified_by": "Administrator",
+ "module": "ACCU",
+ "name": "Consulta",
+ "name_case": "UPPER CASE",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "ACCU Consultas",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "restrict_to_domain": "ACCU",
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

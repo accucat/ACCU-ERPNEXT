@@ -1,0 +1,90 @@
+{
+ "_liked_by": "[\"Administrator\"]",
+ "actions": [],
+ "autoname": "field:nombre",
+ "creation": "2020-11-08 13:10:32.076977",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "nombre",
+  "cantidad",
+  "es_exento",
+  "notas"
+ ],
+ "fields": [
+  {
+   "fieldname": "nombre",
+   "fieldtype": "Data",
+   "label": "Nombre",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "cantidad",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Cantidad",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "es_exento",
+   "fieldtype": "Check",
+   "label": "Es exento"
+  },
+  {
+   "fieldname": "notas",
+   "fieldtype": "Small Text",
+   "label": "Notas"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2020-11-08 15:13:51.625785",
+ "modified_by": "Administrator",
+ "module": "ACCU",
+ "name": "Cuota de socio",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "ACCU Directiva",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "ACCU",
+   "share": 1
+  }
+ ],
+ "restrict_to_domain": "ACCU",
+ "sort_field": "cantidad",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

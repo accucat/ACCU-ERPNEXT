@@ -11,6 +11,8 @@ app_color = "grey"
 app_email = "alejandroamo@accucatalunya.cat"
 app_license = "MIT"
 
+fixtures = ["Cuota de socio","Causa de baja"]
+
 # Includes in <head>
 # ------------------
 
