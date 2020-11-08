@@ -19,22 +19,23 @@ class Socio(Document):
         def encode_char(c):
             # Position in the alphabet (A=1, B=2, ...) plus nine
 	        return str(9 + ord(c) - 64)
-            # remove whitespaces, upper case to get the right number from ord()
+        
+        # remove whitespaces, upper case to get the right number from ord()
 	    # iban = ''.join(self.iban.split(' ')).upper()
         iban = self.iban
-	# Move country code and checksum from the start to the end
-	flipped = iban[4:] + iban[:4]
-	# Encode characters as numbers
-	encoded = [encode_char(c) if ord(c) >= 65 and ord(c)
-	                       <= 90 else c for c in flipped]
+	    
+        # Move country code and checksum from the start to the end
+        flipped = iban[4:] + iban[:4]
+	    
+        # Encode characters as numbers
+        encoded = [encode_char(c) if ord(c) >= 65 and ord(c) <= 90 else c for c in flipped]
 
-	try:
-	    to_check = int(''.join(encoded))
-	except ValueError:
-	    frappe.throw(_('Error en el formato del IBAN'))
-
-    if to_check % 97 != 1:
-	    frappe.throw(_('Error en los dígitos de comprobación del IBAN'))
+        try:
+	        to_check = int(''.join(encoded))
+        except ValueError:
+            frappe.throw(_('Error en el formato del IBAN'))
+        if to_check % 97 != 1:
+            frappe.throw(_('Error en los dígitos de comprobación del IBAN'))
 
     def validate(self):
         # campos calculados
@@ -54,7 +55,7 @@ class Socio(Document):
         # en este punto, y tras la comprobacion anterior, los campos de nombre completo y numero de ID del pagador deberian tener algun valor,
         # salvo que solamente uno de los dos estuviera rellenado, cosa que seria incorrecta y por tanto pasamos a cancelar el guardado y avisar al usuario
 
-        if (self.nombre_pagador in (None, "") or self.numero_id_pagador in (None, ""):
+        if self.nombre_pagador in (None, "") or self.numero_id_pagador in (None, ""):
             # los datos de pagador parecen parcialmente rellenados
             frappe.throw("Incoherencia en el DNI y el nombre del pagador.<br/>Si se introducen datos en uno de los dos campos, " + 
             "deben introducrse tambien en el otro.<br/>Si el socio y la persona que paga son la misma persona, se deben dejar los dos campos vacios. " +
@@ -64,11 +65,11 @@ class Socio(Document):
         # IBAN
         if (self.medio_de_pago == "Domiciliación Bancaria"):
             # IBAN es obligatorio
-            self.iban=''.joint(self.iban.split(' ')).upper()
+            self.iban=''.join(self.iban.split(' ')).upper()
             self.validate_iban
 
         else:
             # IBAN deberia estar en blanco
-            if self self.iban not in (None, ""):
+            if self.iban not in (None, ""):
                 frappe.throw("El campo IBAN solo debe tener datos cuando el medio de pago es domiciliación bancaria",
                              "IBAN residual o medio de pago incorrecto")
