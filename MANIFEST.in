@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include accu *.css
+recursive-include accu *.csv
+recursive-include accu *.html
+recursive-include accu *.ico
+recursive-include accu *.js
+recursive-include accu *.json
+recursive-include accu *.md
+recursive-include accu *.png
+recursive-include accu *.py
+recursive-include accu *.svg
+recursive-include accu *.txt
+recursive-exclude accu *.pyc
